@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <title>Travel Booking</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Add smooth transition */
+        }
+
+        header.scrolled {
+            background-color: violet;
+            color: #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav .nav-icon {
+            font-size: 18px;
+        }
+
+        nav .apply-button {
+            background-color: #27ae60;
+            color: #fff;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        nav .apply-button:hover {
+            background-color: #219d54;
+        }
+
+        .image-container {
+            position: relative;
+            text-align: center;
+            margin-top: 40px; /* Adjusted margin to account for fixed header */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        body.no-scroll {
+            /* Add styles to prevent body scroll when the header is fixed */
+            overflow: hidden;
+        }
+
+        .spacer {
+            height: 80px; /* Adjusted height to match the margin-top in .image-container */
+        }
+
+        .head {
+            margin-top: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .card {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .contact-btn,
+        .learn-more-btn {
+            padding: 8px 16px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn:hover,
+        .learn-more-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Updated styles for contact section */
+        .contact-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px;
+            padding: 30px;
+            background-color: rgb(107, 107, 107);
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .whatsapp-btn,
+        .start-chat-btn {
+            padding: 12px 24px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-btn:hover,
+        .start-chat-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="container">
+        <h1 id="header-text">Explore Your Next Adventure</h1>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="nav-list">
+              <a href="./see.html"><li><i class="nav-icon" >See & Do</i></li> </a>  
+               <a href="./plan.html"> <li><i class="nav-icon">Plan Your Trip</i></li></a>
+               <a href="./travel.html"><li><i class="nav-icon">Travel Essentials</i></li></a> 
+               <a href="./india.html"><li><i class="nav-icon">India Calendar</i></li></a> 
+               <a href="./experience.html"><li><i class="nav-icon">Experiences</i></li></a>
+                <a href="./map.html"><li><i class="nav-icon">India Map</i></li></a>
+                <li><a href="#search"><i class="nav-icon">🔍</i></a></li> <!-- Search icon -->
+                <li><a href="#contact"><i class="nav-icon">📞</i></a></li> <!-- Contact icon -->
+                <li><button class="apply-button">Apply for eVisa</button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="spacer"></div>
+
+<!-- Image Section with Scroll Effect -->
+<div class="image-container">
+    <img src="../travel/image/Plan_files/full-bleed-slider-04.jpg" alt="Your Image Description">
+</div>
+
+<div class="header head">
+    <br>
+    <center>
+        <h1><b>GET READY TO VISIT......</b></h1>
+    </center>
+</div>
+
+<!-- Section with Cards -->
+<section class="container mt-4">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card" style="width: 100%; height: 400px; margin-left: 0%;">
+                <img src="../travel/image/Plan_files/saudi-tour-packages-banner.jpg" class="card-img-top"
+                     alt="..." style="object-fit: cover; height: 100%;">
+                <div class="card-body">
+                    <p class="card-text">Get to know the country About India From how to get here, to navigating
+                        the currency, climate and culture once you’ve arrived, here’s everything you need to
+                        know about visiting India Arabia.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card" style="width: 100%; height: 300px;">
+                <img src="../travel/image/Plan_files/desert.jpg" class="card-img-top" alt="..."
+                     style="object-fit: cover; height: 100%;">
+                <div class="card-body">
+                    <p class="card-text">Get to know the country About India From how to get here, to navigating
+                        the currency, climate and culture once you’ve arrived, here’s everything you need to
+                        know about visiting India Arabia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="head">
+    <center>
+        <h1><b>ALL YOU NEED TO KNOW.....</b></h1>
+    </center>
+</div>
+
+<!-- Section with Cards -->
+<section class="container mt-4">
+    <div class="card-container">
+        <div class="card">
+            <img src="../travel/image/Plan_files/card1.jpg" alt="Card Image 1">
+            <div class="card-body">
+                <p class="card-text">Common Phrases In India</p>
+                <div class="card-buttons">
+                    <button class="contact-btn">Contact</button>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../travel/image/Plan_files/card2.jpg" alt="Card Image 2">
+            <div class="card-body">
+                <p class="card-text">Safety Travel Tips</p>
+                <div class="card-buttons">
+                    <button class="contact-btn">Contact</button>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../travel/image/Plan_files/card3.jpg" alt="Card Image 3">
+            <div class="card-body">
+                <p class="card-text">Useful Contacts</p>
+                <div class="card-buttons">
+                    <button class="contact-btn">Contact</button>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<div class="contact-section">
+    <h2>Contact Us on WhatsApp</h2>
+    <div class="contact-buttons">
+        <button class="whatsapp-btn">WhatsApp</button>
+        <button class="start-chat-btn">Start Chat</button>
+    </div>
+</div>
+
+<!-- Add this script at the end of the body in your HTML file -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const header = document.querySelector('header');
+        let scrolled = false;
+
+        // Add scroll event listener to change navbar and header styling
+        window.addEventListener('scroll', function () {
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > 20 && !scrolled) {
+                // Add a class to the header when scrolled down
+                header.classList.add('scrolled');
+                scrolled = true;
+            } else if (scrollPosition <= 20 && scrolled) {
+                // Remove the class when at the top
+                header.classList.remove('scrolled');
+                scrolled = false;
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
