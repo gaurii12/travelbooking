@@ -21,4 +21,4 @@ Follow these steps to get started with the Travel Booking Website:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/travel-booking.git
+  git clone (https://github.com/gaurii12/travelbooking)https://github.com/gaurii12/travelbooking
